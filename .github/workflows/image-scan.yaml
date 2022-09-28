@@ -31,5 +31,10 @@ jobs:
          container_tag: "${{ env.CONTAINER_TAG }}"
          crowdstrike_region: "${{ env.FALCON_CLOUD_REGION }}"
          json_report: test.json
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: test.json
 #         crowdstrike_score: 500
          
